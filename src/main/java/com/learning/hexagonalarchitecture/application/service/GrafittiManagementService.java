@@ -31,7 +31,7 @@ public class GrafittiManagementService implements GraffitiManagementUseCase {
         Graffiti graffiti = Graffiti.createGraffiti(command.getName(),
                 command.getDescription(),
                 command.getLocation(),
-                Arrays.asList(command.getPainters()),
+                command.getPainters(),
                 command.getForSale(),
                 command.getAttributes());
 
@@ -69,7 +69,7 @@ public class GrafittiManagementService implements GraffitiManagementUseCase {
         Graffiti updateGrafitti = graffiti.updateGraffiti(command.getName(),
                 command.getDescription(),
                 command.getLocation(),
-                Arrays.asList(command.getPainters()),
+                command.getPainters(),
                 command.getForSale(),
                 command.getAttributes());
         //persist to db
